@@ -1,6 +1,6 @@
 # Compilation Strategy: dev.badbird.processing.compiler.strategy.impl.graph.GraphCompilationStrategy
 # GRAPH:
-# isDirected: true, allowsSelfLoops: false, nodes: [renderer.renderer.py, renderer.score.py, util.ticker.py, renderer.input.py, util.board.py, util.bb.py, scene.initial.py, util.font.py, renderer.game.py, scene.end.py, main.py, scene.board.py, renderer.button.py, util.key.py, scene.scene.py], edges: [<renderer.renderer.py -> renderer.button.py>, <renderer.renderer.py -> renderer.input.py>, <renderer.input.py -> util.bb.py>, <renderer.input.py -> util.ticker.py>, <scene.initial.py -> renderer.button.py>, <scene.initial.py -> renderer.input.py>, <scene.initial.py -> util.board.py>, <scene.end.py -> renderer.button.py>, <scene.end.py -> util.board.py>, <main.py -> renderer.input.py>, <main.py -> renderer.renderer.py>, <main.py -> util.font.py>, <main.py -> scene.board.py>, <main.py -> renderer.button.py>, <main.py -> scene.scene.py>, <main.py -> util.ticker.py>, <scene.board.py -> util.board.py>, <renderer.button.py -> util.bb.py>, <scene.scene.py -> scene.board.py>, <scene.scene.py -> scene.end.py>, <scene.scene.py -> scene.initial.py>]
+# isDirected: true, allowsSelfLoops: false, nodes: [renderer.renderer.py, util.ticker.py, renderer.input.py, util.board.py, util.bb.py, scene.initial.py, util.font.py, renderer.game.py, scene.end.py, main.py, scene.board.py, renderer.button.py, scene.scene.py], edges: [<renderer.renderer.py -> renderer.button.py>, <renderer.renderer.py -> renderer.input.py>, <renderer.input.py -> util.bb.py>, <renderer.input.py -> util.ticker.py>, <scene.initial.py -> renderer.button.py>, <scene.initial.py -> renderer.input.py>, <scene.initial.py -> util.board.py>, <scene.end.py -> renderer.button.py>, <scene.end.py -> util.board.py>, <main.py -> renderer.input.py>, <main.py -> renderer.renderer.py>, <main.py -> util.font.py>, <main.py -> scene.board.py>, <main.py -> renderer.button.py>, <main.py -> scene.scene.py>, <main.py -> util.ticker.py>, <scene.board.py -> util.board.py>, <renderer.button.py -> util.bb.py>, <scene.scene.py -> scene.board.py>, <scene.scene.py -> scene.end.py>, <scene.scene.py -> scene.initial.py>]
 
 # COMPILER_BEGIN: util.bb.py
 
@@ -618,7 +618,7 @@ def setup():
   lastScene = None
   initRenderers()
 
-  #loadMineSweeperFont()
+  loadMineSweeperFont()
 
   global tick, mspt, last_ticks, mspt_overhead, last_tick_overhead, last_tick_end, mspt_total
   mspt = 0

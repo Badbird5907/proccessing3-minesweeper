@@ -111,7 +111,7 @@ def revealCell(x,y):
     board_setup = True
     generateMines(ignorePos=(x, y))
   cell = getCell(x,y)
-  if cell["revealed"]:
+  if cell["revealed"] or cell["flagged"]:
     return "ok"
   # expand out
   queue = deque([(x,y)])
@@ -144,4 +144,9 @@ def revealAllMines():
     for cell in row:
       if cell["mine"]:
         cell["revealed"] = True
+  return
+
+def flagCell(x,y):
+  cell = getCell(x,y)
+  cell["flagged"] = not cell["flagged"]
   return

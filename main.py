@@ -13,6 +13,7 @@ def setup():
   scene = "initial"
   lastScene = None
   initRenderers()
+  noSmooth()
 
   loadMineSweeperFont()
 
